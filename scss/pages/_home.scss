@@ -27,18 +27,28 @@
           .icon {
             span {
               background-color: var(--white-cl);
+              &::after {
+                background-color: var(--white-cl);
+              }
             }
           }
         }
         .icon {
+          @include size(20px, 20px);
+          @include mid(true);
+          z-index: 2;
           span {
-            width: 20px;
-            height: 2px;
+            @include size(20px, 2px);
             position: relative;
             background-color: var(--blue-cl);
             transition: var(--duration);
             &::after {
-              background-color: var(--white-cl);
+              content: "";
+              @include size(20px, 2px);
+              position: absolute;
+              background-color: var(--blue-cl);
+              transform: rotate(90deg);
+              transition: var(--duration);
             }
           }
         }
@@ -69,7 +79,6 @@
       }
       .answer {
         padding: 0px 24px;
-        /* display: none; */
         max-height: 0;
         overflow: hidden;
         transition: var(--duration);

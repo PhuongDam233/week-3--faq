@@ -128,14 +128,6 @@
   -o-transition: var(--duration) $property;
   transition: var(--duration) $property;
 }
-// @mixin transition($args) {
-//   transition: $args;
-//   -webkit-transition: $args;
-//   -moz-transition: $args;
-//   -ms-transition: $args;
-//   -o-transition: $args;
-// }
-
 // CSS Text
 @mixin text(
   $font-family,
